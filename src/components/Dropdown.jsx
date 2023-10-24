@@ -36,7 +36,7 @@ export default function Dropdown({options}) {
     <div className="relative inline-block w-fit" ref={dropdownRef}>
         <div
           onClick={toggleOptions}
-          className={`${selectedOption === "" ? 'text-light-primary' : 'text-primary'} appearance-none bg-white py-2 px-7 rounded-full w-fit leading-tight focus:outline-none cursor-pointer flex items-center justify-between gap-x-4 text-5xl`}
+          className={`${selectedOption === "" ? 'text-light-primary' : 'text-primary'} appearance-none bg-white px-7 rounded-full w-fit leading-tight focus:outline-none cursor-pointer flex items-center justify-between gap-x-4 text-5xl`}
         >
           {selectedOption ? options.find((opt) => opt.value === selectedOption).label : "select an option"}
           <div className=" inset-y-0 right-0 flex items-center text-gray-700">
