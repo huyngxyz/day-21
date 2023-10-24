@@ -17,7 +17,7 @@ export default function ContactForm() {
     <div>
       <form action="submit">
         {/* first row */}
-        <div className="flex flex-col gap-y-3">
+        <div className="flex flex-col gap-y-4">
           <div className="flex space-x-2">
             <div className="space-x-4">
               <label
@@ -27,7 +27,7 @@ export default function ContactForm() {
                 My name is
               </label>
               <input
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline pb-2 w-96 text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
+                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline w-96 text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
                 autoComplete="off"
                 type="text"
                 name="name"
@@ -43,7 +43,7 @@ export default function ContactForm() {
                 from
               </label>
               <input
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline pb-2  text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
+                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline   text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
                 autoComplete="off"
                 type="text"
                 name="company"
@@ -61,13 +61,13 @@ export default function ContactForm() {
           <div className="space-x-4 text-primary font-bold text-5xl">
             <label htmlFor="budget">My budget is</label>
             <Dropdown options={budgetOptions} />
-          <label htmlFor="email">and you can reach me at</label>
+          <label htmlFor="email">and my email is</label>
 
           </div>
           <div className="space-x-4 text-primary font-bold text-5xl">
 
           <input
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline pb-2 w-1/2  text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
+                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline  w-1/2  text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
                 autoComplete="off"
                 type="email"
                 name="email"
