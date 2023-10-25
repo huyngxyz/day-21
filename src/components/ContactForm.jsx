@@ -17,17 +17,17 @@ export default function ContactForm() {
     <div>
       <form action="submit">
         {/* first row */}
-        <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col">
           <div className="flex space-x-2">
-            <div className="space-x-4">
+            <div className="space-x-4 pb-3">
               <label
                 htmlFor="name"
-                className=" text-5xl text-primary font-bold"
+                className=" text-3xl text-primary font-bold"
               >
                 My name is
               </label>
               <input
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline w-96 text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
+                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline w-96 text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1"
                 autoComplete="off"
                 type="text"
                 name="name"
@@ -38,12 +38,12 @@ export default function ContactForm() {
             <div className="space-x-4">
               <label
                 htmlFor="company"
-                className=" text-5xl text-primary font-bold"
+                className=" text-3xl text-primary font-bold"
               >
                 from
               </label>
               <input
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline   text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
+                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline   text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1"
                 autoComplete="off"
                 type="text"
                 name="company"
@@ -52,28 +52,25 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          <div className="flex space-x-2"></div>
-          <div className="space-x-4 text-primary font-bold text-5xl">
+          <div className="space-x-4 text-primary font-bold text-3xl pb-3">
             <label htmlFor="services">I am looking for</label>
             <Dropdown options={serviceOptions} />
             <span>services.</span>
           </div>
-          <div className="space-x-4 text-primary font-bold text-5xl">
+          <div className="space-x-4 text-primary font-bold text-3xl pb-3">
             <label htmlFor="budget">My budget is</label>
             <Dropdown options={budgetOptions} />
-          <label htmlFor="email">and my email is</label>
-
+            <label htmlFor="email">and my email is</label>
           </div>
-          <div className="space-x-4 text-primary font-bold text-5xl">
-
-          <input
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline  w-1/2  text-5xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary"
-                autoComplete="off"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="your email address*"
-              />
+          <div className="space-x-4 text-primary font-bold text-3xl">
+            <input
+              className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline  w-1/2  text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1"
+              autoComplete="off"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="your email address*"
+            />
           </div>
         </div>
       </form>

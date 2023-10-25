@@ -36,7 +36,7 @@ export default function Dropdown({options}) {
     <div className="relative inline-block w-fit" ref={dropdownRef}>
         <div
           onClick={toggleOptions}
-          className={`${selectedOption === "" ? 'text-light-primary' : 'text-primary'} appearance-none bg-white px-7 rounded-full w-fit leading-tight focus:outline-none cursor-pointer flex items-center justify-between gap-x-4 text-5xl`}
+          className={`${selectedOption === "" ? 'text-light-primary' : 'text-primary'} appearance-none bg-white px-7 rounded-full w-fit leading-tight focus:outline-none cursor-pointer flex items-center justify-between gap-x-4 text-3xl`}
         >
           {selectedOption ? options.find((opt) => opt.value === selectedOption).label : "select an option"}
           <div className=" inset-y-0 right-0 flex items-center text-gray-700">
@@ -44,12 +44,14 @@ export default function Dropdown({options}) {
           </div>
         </div>
         {showOptions && (
-          <div className="mt-2 bg-white p-4 text-3xl w-full rounded-2xl  absolute z-10">
-            {options.map((option) => (
+          <div className="mt-2 bg-white p-2 text-2xl w-full rounded-2xl  absolute z-10">
+            {options.map((option, index) => (
               <div
                 key={option.value}
                 onClick={() => handleOptionSelect(option)}
-                className="p-3 cursor-pointer hover:bg-gray-100 transition-all border-b"
+                className={`p-3 cursor-pointer hover:bg-gray-100 transition-all${
+                  index === options.length - 1 ? "" : " border-b"
+                }`}
               >
                 {option.label}
               </div>

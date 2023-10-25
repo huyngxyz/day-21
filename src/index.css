@@ -15,8 +15,8 @@
   }
 }
 
-@layers component {
-  .form-input {
-    @apply text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline pb-2 w-96 text-5xl focus:border-light-primary focus:border-b-4 outline-none autofill:!bg-transparent autofill:!text-primary;
+@layer base {
+  * {
+    /* border: 1px solid red; */
   }
 }
