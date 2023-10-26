@@ -1,9 +1,9 @@
 import ContactForm from "./components/ContactForm";
-import Dropdown from "./components/dropdown";
 
 export default function App() {
   return (
-    <div>
+    <main>
+      <div className="h-screen"></div>
       <div className="h-screen justify-center flex-col flex px-20">
         <div className=" w-fit h-fit">
           <h1 className="text-7xl tracking-tight text-primary font-extrabold max-w-4xl pb-28">
@@ -31,6 +31,6 @@ export default function App() {
         </div>
         <ContactForm />
       </div>
-    </div>
+    </main>
   );
 }

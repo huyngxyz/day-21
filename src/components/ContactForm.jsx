@@ -1,17 +1,43 @@
-import Dropdown from "./dropdown";
+import { useState } from "react";
+import Button from "./Button";
+import Radio from "./Radio";
 
 export default function ContactForm() {
-  const serviceOptions = [
+  const serviceOptions = {
+    id: "service",
+    services: [
     { value: "web", label: "web development" },
     { value: "app", label: "app development" },
     { value: "design", label: "web design" },
-  ];
+  ]
+};
 
-  const budgetOptions = [
+  const budgetOptions = {
+    id: "budget",
+    services: [
     { value: "0-1000", label: "$0 - $1,000" },
     { value: "1000-5000", label: "$1,000 - $5,000" },
     { value: "5000+", label: "Over $5,000" },
-  ];
+  ]};
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    service: '',
+    budget: '',
+    company: '',
+  })
+
+  // const handleChange = (e) => {
+  //   const {name, email, service, budget, company} = e.target
+  //   setFormData(prevFormData => {
+  //     return (
+  //       ...prevFormData,
+  //     )
+
+  //   })
+  // }
+
 
   return (
     <div>
@@ -57,12 +83,12 @@ export default function ContactForm() {
           </div>
           <div className="space-x-4 form-text pb-3">
             <label htmlFor="services">I am looking for</label>
-            <Dropdown options={serviceOptions} />
+            <Radio options={serviceOptions} />
             <span>services.</span>
           </div>
           <div className="space-x-4 form-text pb-3">
             <label htmlFor="budget">My budget is</label>
-            <Dropdown options={budgetOptions} />
+            <Radio options={budgetOptions} />
             <label htmlFor="email">and my email is</label>
           </div>
           <div className="space-x-4 form-text">
@@ -76,8 +102,8 @@ export default function ContactForm() {
             />
           </div>
         </div>
+        <Button />
       </form>
-      <div></div>
     </div>
   );
 }
