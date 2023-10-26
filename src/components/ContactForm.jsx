@@ -23,14 +23,13 @@ export default function ContactForm() {
               <label
                 aria-label="Name"
                 htmlFor="name"
-                className=" text-3xl text-primary font-bold"
+                className=" form-text"
               >
                 My name is
               </label>
               <input
-
                 required
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline w-96 text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1"
+                className="form-text__input w-96"
                 autoComplete="off"
                 type="text"
                 name="name"
@@ -42,12 +41,12 @@ export default function ContactForm() {
               <label
                 aria-label="Company name"
                 htmlFor="company"
-                className=" text-3xl text-primary font-bold"
+                className="form-text"
               >
                 from
               </label>
               <input
-                className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline   text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1"
+                className="form-text__input"
                 autoComplete="off"
                 type="text"
                 name="company"
@@ -56,19 +55,19 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          <div className="space-x-4 text-primary font-bold text-3xl pb-3">
+          <div className="space-x-4 form-text pb-3">
             <label htmlFor="services">I am looking for</label>
             <Dropdown options={serviceOptions} />
             <span>services.</span>
           </div>
-          <div className="space-x-4 text-primary font-bold text-3xl pb-3">
+          <div className="space-x-4 form-text pb-3">
             <label htmlFor="budget">My budget is</label>
             <Dropdown options={budgetOptions} />
             <label htmlFor="email">and my email is</label>
           </div>
-          <div className="space-x-4 text-primary font-bold text-3xl">
+          <div className="space-x-4 form-text">
             <input
-              className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline  w-1/2  text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1"
+              className="form-text__input w-1/2"
               autoComplete="off"
               type="email"
               name="email"

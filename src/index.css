@@ -20,3 +20,13 @@
     /* border: 1px solid red; */
   }
 }
+
+@layer components {
+  .form-text {
+    @apply text-primary font-bold text-3xl
+  }
+
+  .form-text__input {
+    @apply text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1 
+  }
+}
