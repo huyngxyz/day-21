@@ -21,12 +21,15 @@ export default function ContactForm() {
           <div className="flex space-x-2">
             <div className="space-x-4 pb-3">
               <label
+                aria-label="Name"
                 htmlFor="name"
                 className=" text-3xl text-primary font-bold"
               >
                 My name is
               </label>
               <input
+
+                required
                 className="text-center placeholder:text-light-primary text-primary font-bold bg-transparent border-b border-underline w-96 text-3xl focus:border-light-primary outline-none autofill:!bg-transparent autofill:!text-primary pb-1"
                 autoComplete="off"
                 type="text"
@@ -37,6 +40,7 @@ export default function ContactForm() {
             </div>
             <div className="space-x-4">
               <label
+                aria-label="Company name"
                 htmlFor="company"
                 className=" text-3xl text-primary font-bold"
               >
