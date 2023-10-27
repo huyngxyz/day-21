@@ -6,7 +6,7 @@ export default function Button({ loading }) {
       disabled={loading}
       className={`${
         loading ? "bg-light-primary cursor-not-allowed" : "bg-primary"
-      }  text-white rounded-full px-14 py-3 mt-12 items-center flex gap-x-2`}
+      }  text-white rounded-full px-14 py-3 mt-12 font-bold items-center flex gap-x-2`}
     >
       {loading && <Loading />}
       <span className="uppercase text-xl">

@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <div>
-      <div className="h-screen w-screen ">
+      <div className="h-screen w-screen  font-extrabold">
         <h1 className="uppercase leading-1 text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
         <h1 className="uppercase leading-4 text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
         <h1 className="uppercase  leading text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
