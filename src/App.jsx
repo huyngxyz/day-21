@@ -2,7 +2,6 @@ import ContactForm from "./components/ContactForm";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { draw } from "./components/utils/draw";
-import FormSuccess from "./components/FormSuccess";
 
 export default function App() {
   const container = useRef(null)
