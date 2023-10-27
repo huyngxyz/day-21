@@ -1,63 +1,24 @@
-import { useState, useRef, useEffect } from "react";
-import ChevronDown from "./svgs/Chevron";
-
-
-export default function Dropdown({options}) {
-    const [selectedOption, setSelectedOption] = useState("");
-  const [showOptions, setShowOptions] = useState(false);
-  const dropdownRef = useRef(null);
-
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option.value);
-    setShowOptions(false);
-  };
-
-  const toggleOptions = () => {
-    setShowOptions(!showOptions);
-  };
-
-  const handleOutsideClick = (e) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-      setShowOptions(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, []);
-
-
-    
+export default function RadioButtons({ options, selectedOption, setSelectedOption }) {
   return (
-    <div className="relative inline-block w-fit" ref={dropdownRef}>
-        <div
-          onClick={toggleOptions}
-          className={`${selectedOption === "" ? 'text-light-primary' : 'text-primary'} appearance-none bg-white px-7 rounded-full w-fit leading-tight focus:outline-none cursor-pointer flex items-center justify-between gap-x-4 text-3xl`}
+    <div className="inline-flex space-x-4">
+      {options.services.map((option) => (
+        <label
+          htmlFor={option.value} // Use the value as the unique ID
+          key={option.value}
+          className="bg-white rounded-full p-3 text-base items-center cursor-pointer"
         >
-          {selectedOption ? options.find((opt) => opt.value === selectedOption).label : "select an option"}
-          <div className=" inset-y-0 right-0 flex items-center text-gray-700">
-            <ChevronDown showOptions={showOptions} size={24} color = "#000000" />
-          </div>
-        </div>
-        {showOptions && (
-          <div className="mt-2 bg-white p-2 text-2xl w-full rounded-2xl  absolute z-10">
-            {options.map((option, index) => (
-              <div
-                key={option.value}
-                onClick={() => handleOptionSelect(option)}
-                className={`p-3 cursor-pointer hover:bg-gray-100 transition-all${
-                  index === options.length - 1 ? "" : " border-b"
-                }`}
-              >
-                {option.label}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-  );
+          <input
+            id={option.value}
+            type="radio"
+            name={options.id} // Use the options.id as the name attribute
+            value={option.value}
+            checked={selectedOption === option.value}
+            onChange={() => setSelectedOption(option.value)}
+            className="form-radio"
+          />
+          <span className="ml-2">{option.label}</span>
+        </label>
+      ))}
+    </div>
+  )
 }
