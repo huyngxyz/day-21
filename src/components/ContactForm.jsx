@@ -121,8 +121,8 @@ export default function ContactForm() {
             {serviceOptions.map((option) => (
               <label
                 key={option.value}
-                className={`bg-white rounded-full px-4 py-2 text-xl items-center cursor-pointer group 
-                ${formData.service.includes(option.value) ? "bg-primary text-bg" : ""}`}
+                className={`rounded-full px-4 py-2 text-xl items-center cursor-pointer group 
+                ${formData.service.includes(option.value) ? "bg-primary text-bg" : "bg-white text-primary"}`}
               >
                 <input
                   onChange={handleChange}
@@ -146,8 +146,8 @@ export default function ContactForm() {
               {budgetOptions.map((option) => (
                 <label
                   key={option.value}
-                  className={`bg-white rounded-full px-4 py-2 text-xl items-center cursor-pointer checked:bg-lime-200 ${
-                    formData.budget.includes(option.value) ? " bg-primary text-bg" : ""
+                  className={`rounded-full px-4 py-2 text-xl items-center cursor-pointer checked:bg-lime-200 ${
+                    formData.budget.includes(option.value) ? "bg-primary text-bg" : "bg-white "
                   }`}
                 >
                   <input
