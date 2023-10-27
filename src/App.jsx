@@ -12,7 +12,16 @@ export default function App() {
 
   return (
     <div>
-      <div className="h-screen"></div>
+      <div className="h-screen w-screen ">
+        <h1 className="uppercase leading-1 text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
+        <h1 className="uppercase leading-4 text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
+        <h1 className="uppercase  leading text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
+        <h1 className="uppercase leading-3 text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
+        <h1 className="uppercase leading-1 text-[12vw] text-center text-primary tracking-tighter">contact form</h1>
+       
+
+
+      </div>
       <div ref={container} className="h-screen justify-center flex-col flex px-20">
         <div className=" w-fit h-fit">
           <h1 className="text-7xl tracking-tight text-primary font-extrabold max-w-4xl pb-28">
